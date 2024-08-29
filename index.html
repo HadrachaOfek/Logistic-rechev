@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>לוגיסטיקה ורכב</title>
+<style>
+    @font-face {
+        font-family:'myFirstFont';
+        src: url(ktav-yad.ttf);
+     }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: url(back.png) no-repeat center center fixed;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+
+    .container {
+        position: relative;
+        text-align: center;
+    }
+
+    .icons-container {
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5rem;
+    }
+
+    .left-icons, .right-icons {
+        display: flex;
+        gap: 9rem; /* מרווח שווה בין האייקונים */
+    }
+
+    .left-icons {
+        margin-left: -3rem; /* הוספת מרווח משמאל */
+    }
+
+    .right-icons {
+        margin-right: 8rem; /* הוספת מרווח מימין */
+    }
+
+    .icon {
+        width: 80px;
+        text-align: center;
+        transition: transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon:hover {
+        transform: scale(1.1); /* הגדלת האייקון במעבר העכבר */
+    }
+
+    .icon img {
+        width: auto;
+        height: 80px;
+    }
+
+    .icon-text {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        height: 60px;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        height: 60px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 30px;
+    }
+
+    nav ul li {
+        width: 50%;
+        text-align: center;
+        position: relative;
+    }
+
+    nav ul li a {
+        display: block;
+        color: black;
+        text-decoration: none;
+        line-height: 60px;
+    }
+
+    nav ul li:hover ul {
+        display: block;
+    }
+
+    nav ul li ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(245, 230, 211);
+        border-top: rgb(245, 230, 211) 0.1px solid;
+        padding: 0;
+    }
+
+    nav ul li ul li {
+        width: 100%;
+        text-align: center;
+        border: white 0.1px solid;
+        background-color: white;
+    }
+
+    nav ul li ul li:hover {
+        background-color: rgb(207, 207, 207);
+    }
+    
+    /* Media Queries for responsiveness */
+    @media screen and (max-width: 768px) {
+        nav ul li {
+            width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        nav ul li {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" style="border-right: 3px solid rgb(245, 230, 211);">רכב</a>
+                <ul>
+                    <li><a href="#">הוצאת רישיון צבאי</a></li>
+                    <li><a href="#">טפסים</a></li>
+                    <li><a href="#">רישום לנהיגה מונעת</a></li>
+                </ul>
+            </li>
+            <li><a href="#" style="border-right: 3px solid rgb(245, 230, 211);">לוגיסטיקה</a>
+                <ul>
+                    <li><a href="#">מדד לוגיסטי</a></li>
+                    <li><a href="#">הדרכות</a></li>
+                    <li><a href="#">נהלים</a></li>
+                    <li><a href="#">ביקורת</a></li>
+                    <li><a href="#">טפסים</a></li>
+                    <li><a href="#">רכש</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="icons-container">
+        <div class="left-icons">
+            <div class="icon" id="icon1">
+                <a href="#"> <img src="system.png" alt="icon 1"></a>
+                <div class="icon-text">מערכת פסילות</div>
+            </div>
+            <div class="icon" id="icon2">
+                <a href="#"> <img src="jira.png" alt="icon 2"> </a>
+                <div class="icon-text">Jira</div>
+            </div>
+        </div>
+        <div class="right-icons">
+            <div class="icon" id="icon3">
+                <a href="#"> <img src="cont.png" alt="icon3"> </a>
+                <div class="icon-text">אנשי קשר</div>
+            </div>
+            <div class="icon" id="icon4">
+                <a href="#"> <img src="safty.png" alt="icon4"> </a>
+                <div class="icon-text">בטיחות</div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
